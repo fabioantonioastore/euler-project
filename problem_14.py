@@ -6,17 +6,15 @@ sequence = {1:1}
 def collatz(value):
     if value in sequence:
         return sequence[value]
-    sequence[value] = evaluete(value)
-    return sequence[value]
-
-def evaluete(value, count=1):
-    if value == 1:
-        return count
     if value % 2 == 1:
-        return evaluete((value * 3) + 1, count + 1)
+        value = (3 * value) + 1
+        sequence[value] = 1 + collatz(value)
+        return sequence[value]
     else:
-        return evaluete(value / 2, count + 1)
-    
+        value = value / 2
+        sequence[value] = 1 + collatz(value)
+        return sequence[value]
+ 
 l = []
 for i in range(1, 1000000):
     l.append(collatz(i))
