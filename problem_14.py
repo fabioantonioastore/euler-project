@@ -10,10 +10,9 @@ def collatz(value):
         value = (3 * value) + 1
         sequence[value] = 1 + collatz(value)
         return sequence[value]
-    else:
-        value = value / 2
-        sequence[value] = 1 + collatz(value)
-        return sequence[value]
+    value = value / 2
+    sequence[value] = 1 + collatz(value)
+    return sequence[value]
  
 l = []
 for i in range(1, 1000000):
