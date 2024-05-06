@@ -12,11 +12,7 @@ class Chain:
         return self._size
     
     def _calculation(self, value):
-        if value == 89 or value == 1:
-            self._values.append(value)
-            self._size += 1
-            return value
-        if value in self._values:
+        if value in self._values or value == 89 or value == 1:
             self._values.append(value)
             self._size += 1
             return value
@@ -42,9 +38,7 @@ resultValues = array("I")
 
 for i in range(0, 10000000):
     value = Chain(i).getEndValue()
-    print(value)
     if value == 89:
         resultValues.append(value)
 
-print(resultValues)
 print(len(resultValues))
