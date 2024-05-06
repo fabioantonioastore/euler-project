@@ -1,14 +1,4 @@
 from array import array
-
-class Node:
-    def __init__(self, value=None, next=None, prev=None):
-        self.value = value
-        self.next = next
-        self.prev = prev
-
-    def __repr__(self):
-        return f"Node({self.value!r}, {self.next!r}, {self.prev!r})"
-    
 class Chain:
     def __init__(self, value):
         self._values = array("I")
