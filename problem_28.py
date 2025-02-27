@@ -10,7 +10,6 @@ class Spiral:
 
     def get_diagnoals(self) -> array:
         diagnals = array("I", [1])
-        depth = 1
         
         # Dn = n * 2
         # next_index = index + Dn
