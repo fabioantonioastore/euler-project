@@ -1,8 +1,6 @@
 from typing import Any
-from functools import cache
 
 
-@cache
 def is_prime(number: int) -> bool:
     if number % 2 == 0:
         return False
