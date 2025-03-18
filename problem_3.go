@@ -18,19 +18,15 @@ func main(){
 
 	for number % 2 == 0{
 		number /= 2
-		fmt.Println(number)
 	}
 	for number % 3 == 0{
 		number /= 3
-		fmt.Println(number)
 	}
 	for number % 5 == 0{
 		number /= 5
-		fmt.Println(number)
 	}
 	for number % 7 == 0{
 		number /= 7
-		fmt.Println(number)
 	}
 
 	for num:=13; num <= number; num+=2{
@@ -60,5 +56,4 @@ func prime(n int){
 	primes = append(primes, n)
 	mutex.Unlock()
 	wg.Done()
-	fmt.Println(n)
 }
