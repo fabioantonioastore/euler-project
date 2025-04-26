@@ -1,5 +1,3 @@
-from math import acosh
-
 WEEK = 7
 THIRTY_DAYS = 30 * 4
 THIRTY_ONE_DAYS = 31 * 7
