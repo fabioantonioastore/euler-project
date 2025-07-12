@@ -7,3 +7,5 @@ Dockerfile
 .venv
 requirements.txt
 .venv
+# pixi environments
+.pixi
