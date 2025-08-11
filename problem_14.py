@@ -1,7 +1,8 @@
-sequence = {1:1}
+sequence = {1: 1}
 
 # even, n -> n/2
 # odd, n -> 3n + 1
+
 
 def collatz(value):
     if value in sequence:
@@ -13,7 +14,8 @@ def collatz(value):
     value = value / 2
     sequence[value] = 1 + collatz(value)
     return sequence[value]
- 
+
+
 l = []
 for i in range(1, 1000000):
     l.append(collatz(i))

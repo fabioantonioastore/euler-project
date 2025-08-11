@@ -15,12 +15,9 @@ def get_lines():
     with open(FILE_NAME, "r") as file:
         for line in file.readlines():
             line = line.split(",")
-            yield Power(
-                line = count,
-                base = int(line[0]),
-                exponent = int(line[1])
-            )
+            yield Power(line=count, base=int(line[0]), exponent=int(line[1]))
             count += 1
+
 
 max_power = Power(0, 0, 0)
 max_value = 0

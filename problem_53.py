@@ -13,7 +13,7 @@ def calc_comb(n: int, r: int) -> int:
     return factorial(n) / (factorial(n - r) * factorial(r))
 
 
-GREATER_THAN = 10 ** 6
+GREATER_THAN = 10**6
 total = 0
 
 for n in range(1, 101):

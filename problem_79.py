@@ -19,8 +19,11 @@ def is_valid_combination(passcode: list[str], combination: list[str]) -> bool:
 
     if index_one < index_two < index_three:
         return True
-    if passcode.count(combination[0]) == 1 and passcode.count(combination[1]) == 1 and passcode.count(
-            combination[2]) == 1:
+    if (
+        passcode.count(combination[0]) == 1
+        and passcode.count(combination[1]) == 1
+        and passcode.count(combination[2]) == 1
+    ):
         return False
 
     for i in range(len(passcode)):
@@ -64,12 +67,12 @@ for passcode in generate_passcode(list(digits_in_passcode), []):
     if valid:
         if not passcode_len:
             passcode_len = len(passcode)
-            final_passcode = list_to_str(passcode)
+            final_passcode = passcode
             continue
         if len(passcode) < passcode_len:
             passcode_len = len(passcode)
-            final_passcode = list_to_str(passcode)
+            final_passcode = passcode
             continue
 
-
+final_passcode = list_to_str(final_passcode)
 print(final_passcode)

@@ -12,6 +12,8 @@ def rev_number(number: int) -> int:
 
 
 MAX_ITERATION = 50
+
+
 def is_lychrel(number: int) -> bool:
     for _ in range(MAX_ITERATION):
         number += rev_number(number)
@@ -20,7 +22,7 @@ def is_lychrel(number: int) -> bool:
     return True
 
 
-MAX_RANGE = 10 ** 4
+MAX_RANGE = 10**4
 total_lychrel = 0
 for n in range(1, MAX_RANGE):
     if is_lychrel(n):

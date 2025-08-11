@@ -1,4 +1,4 @@
-def find(n,m1,m2):
+def find(n, m1, m2):
     sum = 0
     for i in range(n):
         if i % m1 == 0:
@@ -7,4 +7,5 @@ def find(n,m1,m2):
             sum += i
     return sum
 
-print(find(1000,3,5))
+
+print(find(1000, 3, 5))

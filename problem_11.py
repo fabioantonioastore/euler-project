@@ -2,6 +2,8 @@ from array import array
 
 
 FILE_NAME = "problem_11.txt"
+
+
 def get_matrix() -> list[array]:
     matrix = []
     with open(FILE_NAME, "r") as file:
@@ -11,6 +13,7 @@ def get_matrix() -> list[array]:
                 row.append(int(number))
             matrix.append(row)
     return matrix
+
 
 matrix = get_matrix()
 

@@ -17,9 +17,11 @@ def rev_pentagonal(n: int) -> int:
     sqrt = (1 + (24 * n)) ** (1 / 2)
     return (1 + sqrt) / 6
 
+
 def rev_hexagonal(n: int) -> int:
     sqrt = (1 + (8 * n)) ** (1 / 2)
     return (1 + sqrt) / 4
+
 
 n = 40756
 while True:

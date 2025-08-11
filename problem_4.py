@@ -11,6 +11,7 @@ def pol(num):
             return False
     return True
 
+
 nums = []
 
 for i in range(100, 1000):

@@ -3,14 +3,12 @@ from array import array
 
 class Spiral:
     def __init__(self, spiral_row_size: int) -> None:
-        total_number = spiral_row_size ** 2
-        self.spiral_numbers = array("I", [
-            i for i in range(1, total_number + 1)
-        ])
+        total_number = spiral_row_size**2
+        self.spiral_numbers = array("I", [i for i in range(1, total_number + 1)])
 
     def get_diagnoals(self) -> array:
         diagnals = array("I", [1])
-        
+
         # Dn = n * 2
         # next_index = index + Dn
         # start_index = 0
@@ -18,7 +16,7 @@ class Spiral:
         index = 0
         n = 1
         try:
-            while (True):
+            while True:
                 for _ in range(4):
                     index += n * 2
                     diagnals.append(self.spiral_numbers[index])

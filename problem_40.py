@@ -11,7 +11,7 @@ class DecimalPart:
 
 
 class Node:
-    def __init__(self, value: Any, next: Optional['Node'] = None) -> None:
+    def __init__(self, value: Any, next: Optional["Node"] = None) -> None:
         self.value = value
         self.next = next
 
@@ -54,7 +54,7 @@ class LinkedList:
 irrational_number = LinkedList()
 position = 1
 n = 0
-while(len(irrational_number) < (10 ** 6)):
+while len(irrational_number) < (10**6):
     n += 1
     value = str(n)
     for char in value:
@@ -64,6 +64,6 @@ while(len(irrational_number) < (10 ** 6)):
 
 result = 1
 for i in range(7):
-    result *= irrational_number[(10 ** i) - 1].value
+    result *= irrational_number[(10**i) - 1].value
 
 print(result)

@@ -2,10 +2,7 @@ from sys import setrecursionlimit
 
 setrecursionlimit(10000)
 
-powValues = {
-    1: 1,
-    2: 4
-}
+powValues = {1: 1, 2: 4}
 
 
 class Pow:

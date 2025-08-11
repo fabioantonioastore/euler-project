@@ -2,6 +2,8 @@ from functools import cache
 
 
 FILE_NAME = "problem_42.txt"
+
+
 def get_words() -> list[str]:
     result = []
     with open(FILE_NAME, "r") as file:
@@ -9,7 +11,7 @@ def get_words() -> list[str]:
             words = line.split(",")
             for word in words:
                 result.append(word[1:-1:])
-    
+
     return result
 
 
@@ -18,12 +20,11 @@ def get_letter_position(letter: str) -> int:
     return ord(letter) - ord("A") + 1
 
 
-
 def get_word_value(word: str) -> int:
     value = 0
     for letter in word:
         value += get_letter_position(letter)
-    
+
     return value
 
 
@@ -35,7 +36,7 @@ def triangule_number(term: int) -> int:
 def is_triangule_word(word: str) -> bool:
     word_value = get_word_value(word)
     term = 1
-    
+
     while True:
         triangule = triangule_number(term)
         if triangule == word_value:

@@ -9,7 +9,7 @@ class QueueDescriptor:
 
     def __get__(self, instance, owner) -> Any:
         return instance.__dict__[self.storage_name]
-    
+
     def __set__(self, instance, value) -> None:
         instance.__dict__[self.storage_name] = value
 
@@ -25,7 +25,7 @@ class RotationQueue:
             return self.values[index]
         except Exception as error:
             raise error
-        
+
     def rotate(self, times: int = 1) -> None:
         for _ in range(times):
             first_value = self.values[0]
@@ -41,12 +41,12 @@ class Circular:
     def is_prime(self, number: int) -> bool:
         if number % 2 == 0:
             return False
-        
-        square = int(number ** (1/2) + 1)
+
+        square = int(number ** (1 / 2) + 1)
         for i in range(3, square, 2):
             if number % i == 0:
                 return False
-            
+
         return True
 
     def is_circular(self, number: int) -> bool:
@@ -57,7 +57,7 @@ class Circular:
         for number in number_rotations:
             if not self.is_prime(number):
                 return False
-        
+
         return True
 
     def get_rotations(self, number_str: str, digits: int) -> list[int]:
@@ -74,7 +74,7 @@ class Circular:
         return rotation_numbers
 
 
-MAX_NUMBER = 10 ** 6
+MAX_NUMBER = 10**6
 CIRCULAR = Circular()
 circular_primes = array("I", [2])
 

@@ -3,7 +3,7 @@
 
 from functools import cache
 
-MAX_NUMBER = 10 ** 4
+MAX_NUMBER = 10**4
 amicables_sum = 0
 
 

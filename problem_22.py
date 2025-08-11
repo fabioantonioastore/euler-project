@@ -1,11 +1,14 @@
 from functools import cache
 
+
 @cache
 def get_letter_position(letter: str) -> int:
-    return (ord(letter) - ord("A") + 1)
+    return ord(letter) - ord("A") + 1
 
 
 FILE_NAME = "problem_22.txt"
+
+
 def get_names() -> list[str]:
     names = []
     with open(FILE_NAME, "r") as file:

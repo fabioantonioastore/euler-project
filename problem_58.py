@@ -19,7 +19,7 @@ class SpiralDescriptor:
 
     def __get__(self, instance, owner) -> Any:
         return instance.__dict__[self.storage_name]
-        
+
     def __set__(self, instance, value) -> None:
         instance.__dict__[self.storage_name] = value
 
@@ -48,7 +48,6 @@ class Spiral:
                 self.total_primes += 1
         self.total_diagonals += 4
 
-
     def calc_deepth(self) -> int:
         total_layers = self.get_total_layers()
         deepth = int((total_layers - 1) / 2)
@@ -59,10 +58,11 @@ class Spiral:
         if last_number == 1:
             return 1
         return int(last_number ** (1 / 2))
-            
+
     def calc_ratio(self) -> float:
         return self.total_primes / self.total_diagonals
-    
+
+
 SPIRAL = Spiral(7)
 while SPIRAL.calc_ratio() >= 0.10:
     SPIRAL.add_layer()

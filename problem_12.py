@@ -21,5 +21,6 @@ class Triangular:
                 total_divisors += 2
         return total_divisors
 
+
 t = Triangular(500)
 print(t())

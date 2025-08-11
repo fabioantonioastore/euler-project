@@ -4,12 +4,12 @@ from itertools import permutations
 def is_prime(number: int) -> bool:
     if number % 2 == 0:
         return False
-    
+
     root = int(number ** (1 / 2))
     for n in range(3, root + 1, 2):
         if number % n == 0:
             return False
-    
+
     return True
 
 
@@ -20,7 +20,7 @@ def get_permutations(digits: str) -> list[int]:
         for digit in tp:
             number += digit
         numbers.append(int(number))
-    
+
     return sorted(numbers, reverse=True)
 
 
@@ -32,7 +32,7 @@ while max_prime == 0:
         if is_prime(n):
             max_prime = n
             break
-    
+
     digits = digits[0:-1:]
 
 print(max_prime)

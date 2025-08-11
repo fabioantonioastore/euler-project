@@ -38,6 +38,7 @@ def get_len_number(number: str) -> int:
 
 total_letters = 0
 
+
 def get_len(i: int) -> None:
     global total_letters
     if i == 1000:
@@ -49,9 +50,11 @@ def get_len(i: int) -> None:
         return
 
     i = str(i)
-    
+
     if len(i) == 3:
-        total_letters += get_len_number(i[0]) + get_len_number("100") + get_len_number("and")
+        total_letters += (
+            get_len_number(i[0]) + get_len_number("100") + get_len_number("and")
+        )
         i = i[1::]
 
     if len(i) == 2:
@@ -68,6 +71,7 @@ def get_len(i: int) -> None:
         if i == "0":
             return
         total_letters += get_len_number(i)
+
 
 for i in range(1, 1001):
     get_len(i)

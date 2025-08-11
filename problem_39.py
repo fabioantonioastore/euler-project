@@ -10,10 +10,10 @@ def get_solutions(perimiter: int) -> int:
 
     for a in range(1, perimiter):
         rest_perimiter = perimiter - a
-        a_root = a ** 2
+        a_root = a**2
         for b in range(1, rest_perimiter):
-            c = (a_root + (b ** 2)) ** (1 / 2)
-            if (a + b + c == perimiter):
+            c = (a_root + (b**2)) ** (1 / 2)
+            if a + b + c == perimiter:
                 solution = {a, b, c}
                 if not solution in solutions:
                     solutions.append(solution)
@@ -21,7 +21,8 @@ def get_solutions(perimiter: int) -> int:
 
     return len(solutions)
 
-MAX_PERIMITER = 10 ** 3
+
+MAX_PERIMITER = 10**3
 
 max_solutions = 0
 max_perimiter = 0

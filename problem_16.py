@@ -6,6 +6,7 @@ def pow(value, expoent):
         count += 1
     return result
 
+
 numbers = str(pow(2, 1000))
 sum = 0
 

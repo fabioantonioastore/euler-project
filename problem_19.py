@@ -43,6 +43,7 @@ def get_first_day(year: int) -> int:
 
     return actual_day
 
+
 def get_total_days(day: int, first_year: int, last_year: int) -> int:
     total_years = last_year - first_year + 1
     first_day = get_first_day(first_year)
@@ -66,5 +67,6 @@ def get_total_days(day: int, first_year: int, last_year: int) -> int:
                 actual_day += 1
 
     return days_count
+
 
 print(get_total_days(1, 1901, 2000))
